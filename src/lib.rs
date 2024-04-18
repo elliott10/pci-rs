@@ -675,11 +675,12 @@ pub unsafe fn probe_function<T: PortOps>(
         _ => {
             max = 0;
             kind = DeviceKind::Unknown;
-            debug_assert!(
+            warn!(
                 false,
                 "pci: unknown device header type {} for {:?} {:?}",
                 hdrty, loc, id
             );
+            return None;
         }
     };
 
