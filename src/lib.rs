@@ -676,7 +676,6 @@ pub unsafe fn probe_function<T: PortOps>(
             max = 0;
             kind = DeviceKind::Unknown;
             warn!(
-                false,
                 "pci: unknown device header type {} for {:?} {:?}",
                 hdrty, loc, id
             );
